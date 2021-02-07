@@ -8,6 +8,10 @@ class AppointmentsRepository {
     this.appointments = [];
   }
 
+  public all(): Appointment[] {
+    return this.appointments;
+  }
+
   public findByDate(date: Date): Appointment | null {
     // verificando se há dois agendamentos feito na mesma data e hora
     const findAppointment = this.appointments.find(appointment =>
