@@ -4,5 +4,9 @@
   "port": 5432,
   "username": "postgres",
   "password": "3bb58ac4",
-  "database": "marca_postgres"
+  "database": "marca_postgres",
+  "migrations": ["./src/database/migrations/*.ts"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
 }
