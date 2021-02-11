@@ -1,6 +1,9 @@
 import { isEqual } from 'date-fns';
 import Appointment from '../models/Appointment';
 
+// O repositorie é a parte que vai trabalhar com os dados vindo do model
+// Listar, Criar, Atualizar, Deletar (CRUD)
+
 interface CreateAppointmentDTO {
   provider: string;
   date: Date;
