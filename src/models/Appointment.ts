@@ -1,20 +1,18 @@
-import { v4 as uuid } from 'uuid';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 // o Model é a representação de como um dado é salvo dentro da aplicacação
 
+// indicando qual entidade(tabela) vai ser salva com @Entity
+@Entity('appointments')
 class Appointment {
+  @PrimaryGeneratedColumn('uuid')
   id: string;
 
+  @Column()
   provider: string;
 
+  @Column('timestamp with time zone')
   date: Date;
-
-  // função para omitir um atributo da classe Omit<class>, 'atributo que quer omitir'
-  constructor({ provider, date }: Omit<Appointment, 'id'>) {
-    this.id = uuid();
-    this.provider = provider;
-    this.date = date;
-  }
 }
 
 export default Appointment;
