@@ -5,6 +5,7 @@
   "username": "postgres",
   "password": "3bb58ac4",
   "database": "marca_postgres",
+  "entities": ["./src/models/*.ts"],
   "migrations": ["./src/database/migrations/*.ts"],
   "cli": {
     "migrationsDir": "./src/database/migrations"
